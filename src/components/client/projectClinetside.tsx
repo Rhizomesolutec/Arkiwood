@@ -107,7 +107,7 @@ const EnhancedProjectsSection = ({ projects }: { projects: Project[] }) => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#7F6456] via-[#A68B7A] to-[#7F6456] bg-clip-text text-transparent mb-6">
-            Featured Projects
+            UAE Signature Interior Projects
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-[#7F6456] to-[#A68B7A] mx-auto mb-6 rounded-full"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
