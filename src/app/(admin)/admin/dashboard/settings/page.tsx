@@ -20,7 +20,7 @@ export default async function page() {
         <AdminSettings inistalData={data![0]} />
         <ChangePassword />
         {user.user?.user_metadata.role === "Super Admin" && (
-          <AdminUsersDashboard userData={usersData} />
+        <AdminUsersDashboard userData={usersData} />
         )}
       </div>
     </>
