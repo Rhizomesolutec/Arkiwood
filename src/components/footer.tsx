@@ -129,7 +129,7 @@ export default function FooterFooter() {
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/ourservices/Authorities" className="hover:underline">
+                <Link href="/ourservices/Approvals and Authorities" className="hover:underline">
                  Authorities
                 </Link>
               </li>
