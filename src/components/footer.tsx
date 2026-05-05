@@ -109,7 +109,7 @@ export default function FooterFooter() {
             </h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <Link href="ourservices/MEP%20Drawings" className="hover:underline">
+                <Link href="/ourservices/MEP%20Drawings" className="hover:underline">
                   MEP Drawings
                 </Link>
               </li>
