@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Service as TypeService } from "@/types/type";
+import { generateSlug } from "@/lib/utils";
 
 // Type definitions
 
@@ -166,7 +167,7 @@ export default function Service({
       if (!hasDragged) {
         e.stopPropagation();
         router.push(
-          `/ourservices/${encodeURIComponent(services[cindex].service_name)}`
+          `/ourservices/${generateSlug(services[cindex].service_name)}`
         );
       }
     },
@@ -494,11 +495,10 @@ export default function Service({
             <motion.button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`relative transition-all duration-500 ${
-                index === cindex
+              className={`relative transition-all duration-500 ${index === cindex
                   ? "w-12 h-3 bg-[#7F6456] rounded-full"
                   : "w-3 h-3 bg-white/50 hover:bg-white/70 rounded-full"
-              }`}
+                }`}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
