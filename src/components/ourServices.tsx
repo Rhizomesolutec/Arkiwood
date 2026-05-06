@@ -382,6 +382,7 @@
 "use client";
 
 import { Service } from "@/types/type";
+import { generateSlug } from "@/lib/utils";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -466,10 +467,10 @@ function DivComponents({ data, index }: { data: Service; index: number }) {
 
           <motion.div variants={leftItemVariants} className="">
             {data.sub_services.length > 0 &&
-              data.sub_services.map((d,index) => (
+              data.sub_services.map((d, index) => (
                 <div
                   className="flex items-center gap-1"
-                  key={d.service_id + "subservice"+index}
+                  key={d.service_id + "subservice" + index}
                 >
                   <svg
                     className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
@@ -494,7 +495,7 @@ function DivComponents({ data, index }: { data: Service; index: number }) {
           <motion.button
             variants={leftItemVariants}
             whileHover={{ scale: 1.2 }}
-            onClick={() => router.push(`/ourservices/${data.service_name}`)}
+            onClick={() => router.push(`/ourservices/${generateSlug(data.service_name)}`)}
             className="border-2 border-[#7F6456] hover:text-white text-[#7F6456] hover:bg-[#7F6456] transition-colors w-32 p-3 rounded-full"
           >
             KNOW MORE
@@ -611,10 +612,10 @@ function DivComponents({ data, index }: { data: Service; index: number }) {
 
             <motion.div variants={rightItemVariants} className="">
               {data.sub_services.length > 0 &&
-                data.sub_services.map((d,index) => (
+                data.sub_services.map((d, index) => (
                   <div
                     className="flex items-center gap-1"
-                    key={d.service_id + "sub"+index}
+                    key={d.service_id + "sub" + index}
                   >
                     <svg
                       className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
@@ -638,7 +639,7 @@ function DivComponents({ data, index }: { data: Service; index: number }) {
 
             <motion.button
               variants={rightItemVariants}
-              onClick={() => router.push(`/ourservices/${data.service_name}`)}
+              onClick={() => router.push(`/ourservices/${generateSlug(data.service_name)}`)}
               whileHover={{ scale: 1.2 }}
               className="border-2 border-[#7F6456] hover:text-white text-[#7F6456] hover:bg-[#7F6456] transition-colors w-32 p-3 rounded-full"
             >
@@ -855,7 +856,7 @@ export default function OurServices({ data }: { data: Service[] }) {
       </div>
       <div id="our-services">
         {data.map((data, index) => (
-          <DivComponents key={index+"DivComponents"} data={data} index={index + 1} />
+          <DivComponents key={index + "DivComponents"} data={data} index={index + 1} />
         ))}
       </div>
     </div>

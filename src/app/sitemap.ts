@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { generateSlug } from "@/lib/utils";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://arkiwooduae.com";
@@ -35,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
-    url: `${baseUrl}/ourservices/${encodeURIComponent(service)}`,
+    url: `${baseUrl}/ourservices/${generateSlug(service)}`,
     lastModified: new Date(),
     priority: 0.8,
   }));

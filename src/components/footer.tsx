@@ -109,28 +109,28 @@ export default function FooterFooter() {
             </h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <Link href="/ourservices/MEP%20Drawings" className="hover:underline">
+                <Link href="/ourservices/mep-drawings" className="hover:underline">
                   MEP Drawings
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/ourservices/Interior Design" className="hover:underline">
+                <Link href="/ourservices/interior-design" className="hover:underline">
                   Interior Design
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/ourservices/Architectural Design" className="hover:underline">
+                <Link href="/ourservices/architectural-design" className="hover:underline">
                   Architectural Design
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/ourservices/Carpentry & Woodworks" className="hover:underline">
-                 Carpentry & Woodworks
+                <Link href="/ourservices/carpentry-and-woodworks" className="hover:underline">
+                  Carpentry & Woodworks
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/ourservices/Approvals and Authorities" className="hover:underline">
-                 Authorities
+                <Link href="/ourservices/approvals-and-authorities" className="hover:underline">
+                  Authorities
                 </Link>
               </li>
             </ul>
@@ -171,6 +171,6 @@ export default function FooterFooter() {
         </div>
       </div>
     </footer>
-    
+
   );
 }

@@ -25,11 +25,21 @@ import { notFound } from "next/navigation";
 import { supabase } from "@/lib/supabaseClient";
 import { Service } from "@/types/type";
 import { PostgrestResponse } from "@supabase/supabase-js";
+import { generateSlug } from "@/lib/utils";
 
 type tParams = Promise<{ services: string }>;
 
 export async function generateMetadata({ params }: { params: tParams }) {
-  const serviceName = decodeURIComponent((await params)?.services || "");
+  const paramService = decodeURIComponent((await params)?.services || "");
+
+  // Resolve actual service name from slug
+  const { data: allServices } = await supabase.from("services").select("service_name");
+  const matchedService = allServices?.find(
+    (s) => generateSlug(s.service_name) === paramService || s.service_name === paramService
+  );
+
+  if (!matchedService) return notFound();
+  const serviceName = matchedService.service_name;
 
   // Special case for MEP Drawings
   if (serviceName.toLowerCase().includes("mep") || serviceName.toLowerCase() === "mep drawings") {
@@ -58,7 +68,7 @@ export async function generateMetadata({ params }: { params: tParams }) {
     openGraph: {
       title: `${data.service_name} – Arkiwood UAE`,
       description: data.description,
-      url: `https://arkiwooduae.com/services/${serviceName}`,   
+      url: `https://arkiwooduae.com/services/${serviceName}`,
       images: [
         {
           url: imageUrl,
@@ -71,14 +81,23 @@ export async function generateMetadata({ params }: { params: tParams }) {
   };
 }
 export default async function page({ params }: { params: tParams }) {
-  const services = decodeURIComponent((await params)?.services || "");
+  const paramService = decodeURIComponent((await params)?.services || "");
+
+  const { data: allServicesList } = await supabase.from("services").select("service_name");
+  const matchedServiceObj = allServicesList?.find(
+    (s) => generateSlug(s.service_name) === paramService || s.service_name === paramService
+  );
+
+  if (!matchedServiceObj) notFound();
+  const services = matchedServiceObj.service_name;
+
   const { data, error } = (await supabase
     .from("services")
     .select("*,sub_services(*),reviews(*)")
     .eq("service_name", services)
     .eq("reviews.showOnLanding", true)) as PostgrestResponse<Service>;
 
-  if (error || !data) {
+  if (error || !data || data.length === 0) {
     notFound();
   }
   const serviceData = data[0];
