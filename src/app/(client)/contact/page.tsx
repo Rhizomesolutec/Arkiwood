@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Contact Arkiwood | MEP & Project Management Services UAE",
   description:
     "Get in touch with Arkiwood, one of the top MEP and project management companies in UAE. Contact us for interior design, fit-out, and joinery services in Dubai.",
+  alternates: {
+    canonical: "https://arkiwooduae.com/contact",
+  },
 };
 
 export default function page() {

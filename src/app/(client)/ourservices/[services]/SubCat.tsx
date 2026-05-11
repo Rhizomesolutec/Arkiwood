@@ -31,7 +31,7 @@ const SubCat: React.FC<Props> = ({ data }) => {
   }, []);
 
   return (
-    <div className="min-h-screen py-16 px-6">
+    <div className="py-6 md:py-16 px-4 md:px-6">
       {/* Header Section */}
       <div className="text-center mb-16">
         <h2
