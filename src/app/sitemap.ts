@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { generateSlug } from "@/lib/utils";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://arkiwooduae.com";
+  const baseUrl = "https://www.arkiwooduae.com";
 
   const services = [
     "MEP Drawings",

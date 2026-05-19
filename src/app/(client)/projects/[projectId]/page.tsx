@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: tParams }) {
     openGraph: {
       title: `${project.title} – Arkiwood`,
       description: project.description,
-      url: `https://arkiwooduae.com/projects/${title}`,
+      url: `https://www.arkiwooduae.com/projects/${title}`,
       images: [
         {
           url: project.main_image?.image_url || "/default-project.jpg",

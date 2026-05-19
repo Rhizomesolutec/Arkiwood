@@ -110,10 +110,10 @@ interface ReviewFormProps {
 
 //   const handlecopy = (): void => {
 //     navigator.clipboard
-//       .writeText(`https://arkiwooduae.com/testimonial/${formData.dynamic_link}`)
+//       .writeText(`https://www.arkiwooduae.com/testimonial/${formData.dynamic_link}`)
 //       .then(() => {
 //         toast.success(
-//           `Copied to clipboard: https://arkiwooduae.com/testimonial/${formData.dynamic_link}`
+//           `Copied to clipboard: https://www.arkiwooduae.com/testimonial/${formData.dynamic_link}`
 //         );
 //       })
 //       .catch((err) => {
@@ -502,7 +502,7 @@ interface ReviewFormProps {
 //                       onClick={handlecopy}
 //                     />
 //                     <p className="text-blue-500 ">
-//                       https://arkiwooduae.com/testimonial/
+//                       https://www.arkiwooduae.com/testimonial/
 //                       {formData.dynamic_link}
 //                     </p>
 //                   </div>
@@ -880,10 +880,10 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
 
   const handlecopy = (): void => {
     navigator.clipboard
-      .writeText(`https://arkiwooduae.com/testimonial/${formData.dynamic_link}`)
+      .writeText(`https://www.arkiwooduae.com/testimonial/${formData.dynamic_link}`)
       .then(() => {
         toast.success(
-          `Copied to clipboard: https://arkiwooduae.com/testimonial/${formData.dynamic_link}`
+          `Copied to clipboard: https://www.arkiwooduae.com/testimonial/${formData.dynamic_link}`
         );
       })
       .catch((err) => {
@@ -1409,7 +1409,7 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
                           />
                         </motion.div>
                         <p className="text-blue-500 break-all">
-                          https://arkiwooduae.com/testimonial/{formData.dynamic_link}
+                          https://www.arkiwooduae.com/testimonial/{formData.dynamic_link}
                         </p>
                       </motion.div>
                     )}

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Arkiwood, one of the top MEP companies in Dubai, offers MEP drawings in UAE, interior design, joinery works, project management, and complete fit-out solutions.",
   alternates: {
-    canonical: "https://arkiwooduae.com/ourservices",
+    canonical: "https://www.arkiwooduae.com/ourservices",
   },
 };
 
