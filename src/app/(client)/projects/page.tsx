@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Arkiwood UAE stands among the top project management companies in Dubai, offering expert project management services UAE for residential and commercial projects.",
   alternates: {
-    canonical: "https://arkiwooduae.com/projects",
+    canonical: "https://www.arkiwooduae.com/projects",
   },
 };
 

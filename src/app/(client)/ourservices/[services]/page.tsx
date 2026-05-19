@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: tParams }) {
       description:
         "Arkiwood is one of the top MEP companies in Dubai offering professional MEP drawings in UAE with high-quality design, engineering, and project management services.",
       alternates: {
-        canonical: `https://arkiwooduae.com/ourservices/${generateSlug(serviceName)}`,
+        canonical: `https://www.arkiwooduae.com/ourservices/${generateSlug(serviceName)}`,
       },
     };
   }
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: { params: tParams }) {
       title: "Carpentry & Woodworks – Arkiwood UAE",
       description: "Custom woodwork crafted with detail, elegance, and function. We design and fabricate furniture and fixtures that elevate your space.",
       alternates: {
-        canonical: `https://arkiwooduae.com/ourservices/${generateSlug(serviceName)}`,
+        canonical: `https://www.arkiwooduae.com/ourservices/${generateSlug(serviceName)}`,
       },
     };
   }
@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: { params: tParams }) {
       title: "Approvals and Authorities – Arkiwood UAE",
       description: "We specialize in delivering carpentry and joinery works that fully comply with local authority regulations and building management standards across the UAE. Our team is experienced in handling documentation and technical requirements for approvals from entities such as Dubai Municipality, Civil Defense, DEWA, and major Free Zone authorities, ensuring smooth project execution without delays.",
       alternates: {
-        canonical: `https://arkiwooduae.com/ourservices/${generateSlug(serviceName)}`,
+        canonical: `https://www.arkiwooduae.com/ourservices/${generateSlug(serviceName)}`,
       },
     };
   }
@@ -89,12 +89,12 @@ export async function generateMetadata({ params }: { params: tParams }) {
       data.description ||
       `Explore ${data.service_name} services by Arkiwood in the UAE.`,
     alternates: {
-      canonical: `https://arkiwooduae.com/ourservices/${generateSlug(serviceName)}`,
+      canonical: `https://www.arkiwooduae.com/ourservices/${generateSlug(serviceName)}`,
     },
     openGraph: {
       title: `${data.service_name} – Arkiwood UAE`,
       description: data.description,
-      url: `https://arkiwooduae.com/ourservices/${generateSlug(serviceName)}`,
+      url: `https://www.arkiwooduae.com/ourservices/${generateSlug(serviceName)}`,
       images: [
         {
           url: imageUrl,

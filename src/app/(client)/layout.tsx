@@ -20,12 +20,12 @@ export const metadata = {
     "Joinery and Carpentry",
     "Office Interior Design",
   ],
-  authors: [{ name: "Arkiwood", url: "https://arkiwooduae.com" }],
+  authors: [{ name: "Arkiwood", url: "https://www.arkiwooduae.com" }],
   openGraph: {
     title: "Arkiwood Interiors & Architecture – Dubai",
     description:
       "Discover Arkiwood’s portfolio in interior design, architecture, MEP, landscaping, and fit-out works across the UAE.",
-    url: "https://arkiwood.com",
+    url: "https://www.arkiwooduae.com",
     siteName: "Arkiwood",
     images: [
       {

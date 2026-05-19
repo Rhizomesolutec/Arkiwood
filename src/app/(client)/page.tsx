@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Discover why Arkiwood UAE ranks among the best interior design companies in Dubai. We create elegant, functional interiors for homes, offices, and villas.",
   alternates: {
-    canonical: "https://arkiwooduae.com/",
+    canonical: "https://www.arkiwooduae.com/",
   },
 };
 

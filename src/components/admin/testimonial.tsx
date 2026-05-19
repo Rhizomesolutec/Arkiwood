@@ -100,10 +100,10 @@
 
 //   const handlecopy = (link) => {
 //     navigator.clipboard
-//       .writeText(`https://arkiwooduae.com/testimonial/${link}`)
+//       .writeText(`https://www.arkiwooduae.com/testimonial/${link}`)
 //       .then(() => {
 //         toast.success(
-//           `Copied to clipboard: https://arkiwooduae.com/testimonial/${link}`
+//           `Copied to clipboard: https://www.arkiwooduae.com/testimonial/${link}`
 //         );
 //       })
 //       .catch((err) => {
@@ -283,7 +283,7 @@
 //                               onClick={() => handlecopy(review.dynamic_link)}
 //                             />
 //                             <p className="text-blue-500 ">
-//                               https://arkiwooduae.com/testimonial/
+//                               https://www.arkiwooduae.com/testimonial/
 //                               {review.dynamic_link}
 //                             </p>
 //                           </div>
@@ -475,10 +475,10 @@ const AdminReviews: FC<AdminReviewsProps> = ({ reviews = [], fetchData }) => {
 
   const handleCopy = (link: string) => {
     navigator.clipboard
-      .writeText(`https://arkiwooduae.com/testimonial/${link}`)
+      .writeText(`https://www.arkiwooduae.com/testimonial/${link}`)
       .then(() => {
         toast.success(
-          `Copied to clipboard: https://arkiwooduae.com/testimonial/${link}`
+          `Copied to clipboard: https://www.arkiwooduae.com/testimonial/${link}`
         );
       })
       .catch((err) => {
@@ -640,7 +640,7 @@ const AdminReviews: FC<AdminReviewsProps> = ({ reviews = [], fetchData }) => {
                               onClick={() => handleCopy(review.dynamic_link!)}
                             />
                             <p className="text-blue-500">
-                              https://arkiwooduae.com/testimonial/
+                              https://www.arkiwooduae.com/testimonial/
                               {review.dynamic_link}
                             </p>
                           </div>
